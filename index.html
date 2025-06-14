@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Love Story</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" />
+</head>
+
+<body>
+
+<div id="welcome-screen">
+  <div class="welcome-message">
+    <h1>Hi Mallika! </h1>
+    <h2>[All this - Just for YOU]</h2>
+    <p>I made this Little Memory lane of Us for You...</p>
+    <button onclick="enterSite()">Tap to Enter</button>
+  </div>
+</div>
+
+  <div class="heart-container"></div>
+
+  <!-- Music Selection Popup -->
+  <div class="music-popup" id="musicPopup">
+    <button class="close-btn" onclick="togglePopup()">✕</button>
+    <h3>Choose a Song 🎶</h3>
+    <select id="songSelector" onchange="changeSong(this.value)">
+      <option value="audio/just_the_way_you_are.mp3">Just The Way You Are - Bruno Mars</option>
+      <option value="audio/ivy.mp3">Ivy - Frank Ocean</option>
+      <option value="audio/i_wish_u_knew.mp3">I Wish U Knew - Vaultboy</option>
+    </select>
+  </div>
+  <button class="music-toggle" onclick="togglePopup()">🎵 Change Song</button>
+
+  <audio id="bgMusic" autoplay loop>
+    <source src="audio/ivy.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Hero Section -->
+  <div class="hero fade-in">
+    <div class="content">
+      <h1 class="typewriter">"Hey Cheeseburger🍔" </h1>
+      <p>Holding Memories can be a pretty sleek stuff i can do , wish we were always together. </p>
+      <a href="#memories" class="btn">See Our Memories</a>
+    </div>
+  </div>
+
+  <!-- Memories Carousel -->
+  <section id="memories" class="memories-section scroll-reveal">
+    <h2>Our Memories(Slide --)</h2>
+    <div class="glider-contain">
+      <div class="glider">
+ <img src="images\18 Birthday.jpg" alt="Birthday kiss">
+  <img src="images\19 Birthday.jpg" alt="Mirror Photo">
+  <img src="images\birthday hug.jpg" alt="HUgS">
+  <img src="images\freshers.jpg" alt="Freshers">
+  <img src="images\garba night.jpg" alt="CUteeeeee">
+  <img src="images\GB hug.jpg" alt="The way you hug me ">
+  <img src="images\twin.jpg" alt="Perfect">
+  <img src="images\xplore.jpg" alt="YE BOHOT CUTE HAI ASFNAKJSFNASKNFASfn">
+  <img src="images\Go Karting.jpg" alt="heh">
+  <img src="images\sketch i did .jpg" alt="hehehehh">
+  <img src="images\station again.jpg" alt="hehehehh">
+  <img src="images\Station.jpg" alt="hehehehh">
+
+</div>
+      <button class="glider-prev">«</button>
+      <button class="glider-next">»</button>
+    </div>
+  </section>
+
+  <!-- Love Notes -->
+  <section class="notes slide-reveal">
+    <h2>Love Notes</h2>
+    <div id="note-box" class="note-box">You're my favorite notification 💬</div>
+  </section>
+
+  <!-- Timeline -->
+    <div class="glider-contain">
+      <div class="glider">
+<section class="timeline scroll-reveal">
+    <h2>Our Timeline</h2>
+    <div class="event">
+      <h3>16 April 2023🌲 - The day I Started Having feelings For YOU</h3>
+      <p>Maybe You don't remember the day from my point of view so let me break it down real quick just to remind you how i started feeling for you ; As we had diffent crowd surrounded i felt to be with you , we sat together leaving everyone behind , i still remember how awakard it was for me so for a change i started clicking pictures of us . The moment you leaned on me (for a photo obv) butterflies or say dragonflies were flying down there . yet i was so tough . later when that mutual friend told us to come closer for a photo i knew i had to pull you in so i grabbed your arm and pulled you in and that was the best part of holding you with me , ever since everytime we went out i always felt like holding your hand ; for a reason i used to convince everyone for HORROR movies tho , hehe .</p>
+      <img src="images\cover.jpg" alt="Feelings started wala spot" class="memory-photo" />
+    </div>
+    <div class="event">
+      <h3>23 October 2023🍿-First ever Date we had and so far the BEST day.</h3>
+      <p> I cabbed us Together , first awakard then holding hands , talking goofy and stuff . That was the first day we went out , i remember you felt like you were not dressed that good but istg just after knowing your outfit i went straight to buy something that matched with you , eventually i found something. But i did not tell you that because you were already excited about the coincidence that happened ; you thought we matched by coincidence how funny was that yet cute right. </p>
+      <p>Movie started , us holding hands waiting for the light to go off was the cutest thing. staring at each other with all the love we had from the start , before interval we went down the stairs and i still remember your breath when we kissed , one time, two times, third time and now i was scared of getting caught , you called me again and we kissed like 4th time for 5 seconds and that was the best feeling a person could have. The face you made when you blushed will always be my favorite , that was the most natural thing I saw of yours , I loved you back then and I still do . </p>
+      <img src="images\First Kiss Day .jpg" alt="First-Kiss day" class="memory-photo" />
+      
+    </div>
+  </section>
+
+  <!-- Reasons I Love You -->
+  <section class="reasons scroll-reveal">
+    <h2>Why I Love You :</h2>
+    <ul class="reason-list">
+      <li>You make me laugh even when I don't feel like smiling</li>
+      <li>You love the little things.</li>
+      <li>You forgive me when i am wrong .</li>
+      <li>You make every day feel special.</li>
+      <li>You have faith in me .</li>
+      <li>You are very confident.</li>
+      <li>You are just the girl i can never stop thinking of.</li>
+    </ul>
+  </section>
+
+  <section class="quiz scroll-reveal">
+  <h2>Let's Play a Quiz! 🧠💕(Secret Message if all are correct!)</h2>
+  <form id="loveQuiz">
+    <div class="question">
+      <p>1. what place feels Nostalgic ? </p>
+      <label><input type="radio" name="q1" value="a"> Narayana. </label><br>
+      <label><input type="radio" name="q1" value="b"> Crossword. </label><br>
+      <label><input type="radio" name="q1" value="c"> Gentlemen Barista.</label>
+    </div>
+
+    <div class="question">
+      <p>2. What’s my favorite thing about you?</p>
+      <label><input type="radio" name="q2" value="a"> Your eyes</label><br>
+      <label><input type="radio" name="q2" value="b"> Personality</label><br>
+      <label><input type="radio" name="q2" value="c"> ASS(obv just click this)</label>
+    </div>
+
+    <div class="question">
+      <p>3. What was the date when I actually started taking hints?</p>
+      <label><input type="radio" name="q3" value="a"> 8th Oct </label><br>
+      <label><input type="radio" name="q3" value="b"> 9th oct </label><br>
+      <label><input type="radio" name="q3" value="c"> 27th sept </label>
+    </div>
+
+    <button type="button" onclick="checkQuiz()">Submit</button>
+  </form>
+
+  <div id="quizResult" class="quiz-result"></div>
+  <div id="perfectMessage" class="secret-message-quiz">
+  💌 You really do remember everything, don’t you?  
+  You’re my favorite person — in every life, it would still be you.  
+  I love you, Mallika. So, so much.
+</div>
+
+</section>
+
+
+
+  <!-- Secret Message -->
+  <section class="secret scroll-reveal">
+    <h2>🔐 Secret Message</h2>
+    <p class="hint">Keep Clicking the HEART Until Something Happens. 💖</p>
+    <div class="secret-heart" onclick="handleHeartClick()">❤️</div>
+    <div class="hidden-message" id="secretMessage">You're my forever, Mallika. In every universe, I'd still choose you , Always and Forever (not just whenever). 💫</div>
+  </section>
+
+  <!-- Letter For You -->
+<!-- Letter For You -->
+<section class="letter scroll-reveal">
+  <h2>A Letter For You</h2>
+  <div class="letter-box">
+    <p><strong>4th June →</strong></p>
+    <p>As I am writing this, I am deeply sad... and being someone who can’t live one moment without you, being away is something I could never have imagined. It’s so crazy.But I understand things will be good and i know every reason of whats happpening.</p>
+    <p>We fight a lot even on silliest stuff. But I trust that we can overcome this test presented to us — and I <em>truly</em> believe that. Distance won’t change what we have. It might keep us apart physically, but our hearts are still intertwined.</p>
+    <p>We’ll manage through the silence, the time zones, the waiting... because love like this doesn’t fade — it grows stronger. yeah maybe you wont feel like doing so but i will always choose you and come for you when you are lost in the strangest way possible .</p>
+    <p>We’ll share laughter in voice notes, hugs through texts, and hope in each call. No matter the distance, you’ll always be my closest person.</p>
+    <p>We make it out — and I will be the happiest person when we meet again.</p>
+    <p> Don't make or think it as a long distance but we actually are , for me a month feels heavy not meeting you and i know we both try our best to meet but destiny keeps us apart somehow , when we meet - I’ll be yours . Stay safe and stay calm . Rohaneet is always with you .</p>
+    <p><strong>I LOVE YOU A LOT, MALLIKA.</strong></p>
+  </div>
+</section>
+
+  <!-- Our Little Movie -->
+  <section class="video scroll-reveal">
+    <h2>Our Little Movie 🎬</h2>
+    <video controls width="90%">
+      <source src="images\VID-20250606-WA0003.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Final Surprise Message -->
+  <section id="finalMessage" class="final-message">
+    <h2>🎁 One Last Thing...</h2>
+    <p>I’ll wait for you. Always. 💖</p>
+  </section>
+
+  
+   <section class="appreciation scroll-reveal">
+  <h2>Just Look At You</h2>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="images/hehe2.jpg" alt="Photo 1" />
+      </div>
+      <div class="flip-card-back">
+        <img src="images/hehe1.jpg" alt="Photo 2" />
+      </div>
+    </div>
+  </div>
+  <p class="sweet-quote">
+    Holy smokes, how are you real? You look so pretty it actually hurts. I could stare at you forever and still never get enough. You’re art. You’re magic. You’re mine. (APPRECIATION SECTION LMFAO IK WHAT IM DOING) 💜
+  </p>
+</section>
+
+
+
+  <footer>
+    <p>Made with ❤️ by Your Hotdawg</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
