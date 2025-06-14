@@ -645,34 +645,3 @@ h1, h2, h3 {
 
 
 
-.memories-section {
-  text-align: center;
-  padding: 2rem;
-}
-
-.carousel-container {
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  display: flex;
-  gap: 1rem;
-  padding: 1rem 0;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 1rem;
-}
-
-.carousel-track img {
-  max-width: 250px;
-  height: auto;
-  scroll-snap-align: start;
-  border-radius: 10px;
-  flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
-}
-
-.carousel-track img:hover {
-  transform: scale(1.05);
-}
